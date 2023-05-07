@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <title>Consultorio</title>
+
+        <link  href="css/style.css" rel="stylesheet"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <meta charset="UTF-8">
+        
+        <script>
+
+            function Verificar( )
+            {
+                var n, c, i, e ;
+                n = document.form1.txtNome.value ; 
+                if ( n.length == 0)
+                {
+                    alert("Preencha o campo nome");
+                    document.form1.txtNome.style.background = "#E9967A" ;
+                    document.form1.txtNome.focus() ;
+                    return false ;
+                }
+
+                c = document.form1.txtCPF.value ; 
+                if ( c.length == 0)
+                {
+                    alert("Preencha o campo CPF");
+                    document.form1.txtCPF.style.background = "#E9967A" ;
+                    document.form1.txtCPF.focus() ;
+                    return false ;
+                }
+
+                i = document.form1.txtIdade.value ; 
+                if ( i.length == 0)
+                {
+                    alert("Preencha o campo Idade");
+                    document.form1.txtIdade.style.background = "#E9967A" ;
+                    document.form1.txtIdade.focus() ;
+                    return false ;
+                }
+
+                e = document.form1.txtEmail.value ; 
+                if ( e.length == 0)
+                {
+                    alert("Preencha o campo Email");
+                    document.form1.txtEmail.style.background = "#E9967A" ;
+                    document.form1.txtEmail.focus() ;
+                    return false ;
+                }
+
+                document.form1.submit();
+            }
+
+
+        </script>
+
+    </head>
+
+    <body>
+        <header>
+
+         <div class="center">
+                <div class="logo"><img src="assets/logoavs.png" width="450"/></div><!--logo-->
+            <div class="menu">
+
+                <a href="index.html">Home</a>
+                <a href="atendimento.html">Atendimento</a>
+                <a href="contato.html">Contato</a>
+                <a href="cadastro.html">Cadastro</a>
+
+            </div><!--menu-->
+        </div><!--center-->
+
+        </header>
+
+        <h1> Cadastro </h1>
+
+            <p> Preencha os campos abaixo para cadastrar um cliente. </p>
+
+                <fieldset>
+                    <legend>Clientes Conveniados</legend>
+                      <form name="form1" action="grava.jsp" method="post">
+                        Nome:
+                        <input type="text" name="txtNome" id="txtNome"> <br>
+                        Idade:
+                        <input type="text" name="txtIdade" id="txtIdade"> <br>
+                        CPF:
+                        <input type="text" name="txtCPF" id="txtCPF"> <br>
+                        E-mail:
+                        <input type="text" name="txtEmail" id="txtEmail"> <br>
+                        
+                        <input type="button" value="Cadastrar" onclick="Verificar()">
+
+                </fieldset>
+
+                </form>
+       
+    </body>
+    
+</html>
